@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    style="@style/LinearLayout2"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/activity_margin">
+
+    <LinearLayout style="@style/LinearLayout4">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextView3"
+            android:textColor="@color/activity_textColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quantity"
+            style="@style/TextView3"
+            android:textColor="@color/activity_textColor" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView3"
+                android:text="@string/currency_symbol"
+                android:textColor="@color/activity_textColor" />
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/TextView3"
+                android:layout_marginLeft="@dimen/activity_marginLeft"
+                android:textColor="@color/activity_textColor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/nulla"
+        android:layout_height="match_parent"
+        android:layout_weight="@dimen/one">
+
+        <ImageButton
+            android:id="@+id/button_sale"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAllCaps="true"
+            app:srcCompat="@drawable/star" />
+    </RelativeLayout>
+</LinearLayout>

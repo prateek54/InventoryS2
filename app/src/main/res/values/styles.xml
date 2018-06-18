@@ -1,0 +1,137 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Theme of the editor -->
+    <style name="EditorTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/editorColorPrimary</item>
+        <item name="colorPrimaryDark">@color/editorColorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Style for a category in the editor -->
+    <style name="CategoryStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>
+
+    <!-- Style for an EditText field in the editor -->
+    <style name="EditorFieldStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+    <!-- Style for the measurement units for an EditText field in the editor -->
+    <style name="EditorUnitsStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingRight">@dimen/activity_margin</item>
+        <item name="android:paddingTop">@dimen/activity_margin</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>
+
+    <style name="RelativeLayout">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ImageView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextView1">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">@dimen/activity_margin</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="TextView2">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">@dimen/activity_marginTop</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textColor">@color/activity_textColor</item>
+    </style>
+
+    <style name="TextView3">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="LinearLayout1">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/activity_margin</item>
+    </style>
+
+    <style name="LinearLayout2">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LinearLayout3">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/nulla</item>
+        <item name="android:layout_weight">@dimen/two</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_margin1</item>
+    </style>
+
+    <style name="LinearLayout4">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/nulla</item>
+        <item name="android:layout_weight">@dimen/one</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">@dimen/one</item>
+    </style>
+
+    <style name="ImageView2">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/activity_ten</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/high_margin</item>
+        <item name="android:paddingRight">@dimen/activity_ten</item>
+    </style>
+
+</resources>

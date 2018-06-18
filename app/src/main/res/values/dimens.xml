@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Common margin value used throughout the app -->
+    <dimen name="nulla">0dp</dimen>
+    <dimen name="activity_margin1">4dp</dimen>
+    <dimen name="activity_marginLeft">6dp</dimen>
+    <dimen name="activity_ten">10dp</dimen>
+    <dimen name="activity_marginTop">8dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="high_margin">48dp</dimen>
+    <dimen name="button_size">60dp</dimen>
+    <dimen name="one">1</dimen>
+    <dimen name="two">2</dimen>
+</resources>

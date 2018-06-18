@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the supplier drop-down Spinner -->
+    <string-array name="array_supplier_options">
+        <item>@string/omron</item>
+        <item>@string/wellmed</item>
+        <item>@string/teva</item>
+    </string-array>
+</resources>

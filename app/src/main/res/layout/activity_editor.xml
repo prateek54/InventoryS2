@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout1"
+    tools:context=".EditorActivity">
+
+    <!-- Product category -->
+    <LinearLayout style="@style/LinearLayout2">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_product" />
+
+        <!-- Input fields -->
+        <LinearLayout style="@style/LinearLayout3">
+
+            <!-- Name field -->
+            <EditText
+                android:id="@+id/edit_product_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_name"
+                android:inputType="textCapWords" />
+
+            <!-- Price field -->
+            <EditText
+                android:id="@+id/edit_product_price"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_price"
+                android:inputType="numberDecimal" />
+
+            <LinearLayout style="@style/LinearLayout2">
+
+                <Button
+                    android:id="@+id/btn_product_minus"
+                    style="@style/Button"
+                    android:text="@string/text_minus_button" />
+
+                <!-- Quantity field -->
+                <EditText
+                    android:id="@+id/edit_product_quantity"
+                    style="@style/EditorFieldStyle"
+                    android:layout_weight="@dimen/two"
+                    android:hint="@string/hint_product_quantity"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btn_product_plus"
+                    style="@style/Button"
+                    android:text="@string/text_plus_button" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_product_image"
+                style="@style/ImageView2"
+                android:src="@mipmap/ic_photo" />
+
+            <Button
+                android:id="@+id/ib_product_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_select_image_button" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Supplier category -->
+    <LinearLayout style="@style/LinearLayout2">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_supplier" />
+
+        <!-- Input fields -->
+        <LinearLayout style="@style/LinearLayout3">
+
+            <!-- Name field -->
+            <Spinner
+                android:id="@+id/edit_supplier"
+                style="@style/Spinner"
+                android:spinnerMode="dropdown" />
+
+            <!-- Phone field -->
+            <EditText
+                android:id="@+id/edit_supplier_phone"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_supplier_phone"
+                android:inputType="phone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
