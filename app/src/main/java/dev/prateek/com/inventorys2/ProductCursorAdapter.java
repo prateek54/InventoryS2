@@ -12,7 +12,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.popey.inventory_app.data.ProductContract;
+import dev.prateek.com.inventorys2.data.ProductContract;
+
 
 public class ProductCursorAdapter extends CursorAdapter {
 
