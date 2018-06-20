@@ -12,6 +12,11 @@
     <!-- Title for the activity to edit an existing product [CHAR LIMIT=20] -->
     <string name="editor_activity_title_edit_product">Edit Product</string>
 
+    <!-- Validation toasts for editing the products [CHAR LIMIT=20] -->
+    <string name="validation_msg_product_name">Please add product name</string>
+    <string name="validation_msg_product_price">Please add product price</string>
+    <string name="validation_msg_product_quantity">Please add product quantity</string>
+
     <!-- Label for product category of attributes in the editor [CHAR LIMIT=30] -->
     <string name="category_product">Product</string>
 

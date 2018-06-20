@@ -90,6 +90,8 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         }
     };
 
+    // Boolean status for required fields, True if these fields have been populated
+    boolean hasAllRequiredValues = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,7 +127,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectImage();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    selectImage();
+                }
             }
         });
         Button btnMinus = findViewById(R.id.btn_product_minus);
@@ -503,14 +507,39 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         }
 
         // Create a ContentValues object where column names are the keys,
-        // and product attributes from the editor are the values.
+        // and product attributes from the editor are the values
         ContentValues values = new ContentValues();
-        values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_NAME, productNameString);
-        values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE, productPriceDouble);
-        values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY, productQuantityInt);
+
+        // REQUIRED VALUES - validation section
+        if (TextUtils.isEmpty(productNameString)) {
+            Toast.makeText(this, getString(R.string.validation_msg_product_name), Toast.LENGTH_SHORT).show();
+            return hasAllRequiredValues;
+        } else {
+            values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_NAME, productNameString);
+        }
+
+        if (TextUtils.isEmpty(priceString)) {
+            Toast.makeText(this, getString(R.string.validation_msg_product_price), Toast.LENGTH_SHORT).show();
+            return hasAllRequiredValues;
+        } else {
+            values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE, productPriceDouble);
+        }
+
+        if (TextUtils.isEmpty(quantityString)) {
+            Toast.makeText(this, getString(R.string.validation_msg_product_quantity), Toast.LENGTH_SHORT).show();
+            return hasAllRequiredValues;
+        } else {
+            values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY, productQuantityInt);
+        }
+
+        // OPTIONAL VALUES
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_IMAGE, image);
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, mSupplier);
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_SUPPLIER_PHONE, supplierPhoneString);
+
+        // Create a ContentValues object where column names are the keys,
+        // and product attributes from the editor are the values.
+
 
         try {
             // Determine if this is a new or existing product by checking if mCurrentProductUri is null or not
